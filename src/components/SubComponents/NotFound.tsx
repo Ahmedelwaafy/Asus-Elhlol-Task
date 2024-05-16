@@ -1,34 +1,24 @@
 import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
-import { HelmetTags, LangLink } from "../MainComponents";
-import { Button } from "../ui/button";
+import { Link, useNavigate } from "react-router-dom";
+import HelmetTags from "../HelmetTags";
 import img from "/assets/images/404-img.png";
 export function Component() {
-  const { t, i18n } = useTranslation("Pages_NotFound");
-
-  const lang = i18n.language?.startsWith("ar") ? "ar" : "en";
-
   const navigate = useNavigate();
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate(`/${lang}`);
+      navigate(`/`);
     }, 5000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [lang, navigate]);
+  }, [navigate]);
 
   return (
     <section className="flex-col flex items-center justify-center w-full h-screen">
-      <HelmetTags
-        title={t("tab.title")}
-        description={t("tab.description")}
-        index={false}
-      />
+      <HelmetTags title="not-found" description="not-found" index={false} />
       <h2 className="text-4xl  font-semibold max-w-6xl mx-auto text-center text-balance ">
-        {t("txt")}
+        Not Found
       </h2>
       <img
         style={{ maxWidth: "600px" }}
@@ -38,11 +28,9 @@ export function Component() {
         width={700}
         height={500}
       />
-      <Button asChild variant={"accent"}>
-        <LangLink className="mx-auto" href="">
-          {t("CTA_txt")}
-        </LangLink>
-      </Button>
+      <Link className="mx-auto" to="/">
+        go home
+      </Link>
     </section>
   );
 }
