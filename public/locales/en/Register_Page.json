@@ -1,0 +1,92 @@
+{
+  "tab": {
+    "title": "Register | Go Offer",
+    "description": "Enter your details and create a new account | Go Offer"
+  },
+  "heading": "Register",
+  "welcome_msg_first": "Enter your details and create a new account.",
+  "welcome_msg_second": "Add your favorite brands.",
+  "form": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Name"
+    },
+    "referral_code": {
+      "label": "Referral Code (Optional)",
+      "placeholder": "Referral Code",
+      "tooltip": "If you have a referral code from a friend place it here! "
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "Phone"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Email"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Password"
+    },
+    "password_confirmation": {
+      "label": "Confirm Password",
+      "placeholder": "Confirm Password"
+    },
+
+    "gender": {
+      "label": "Gender",
+      "placeholder": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "validation_required": "Gender is required."
+    },
+    "country": {
+      "label": "Country",
+      "placeholder": "Country",
+      "validation_required": "Country is required.",
+      "NotFoundMessage": "No countries found"
+    },
+
+    "terms": {
+      "txt": "I Accept The ",
+      "CTA": "Terms & Conditions",
+      "validation_required": "You must accept the terms & Conditions."
+    },
+
+    "SubmitBtnComponent": { "value": "Register" },
+    "no_brands_found": "There are no brands for the selected country!"
+  },
+
+  "form__bottom": {
+    "have_an_account": "Already have an account?",
+    "Login": "Login"
+  },
+
+  "validations": {
+    "name": {
+      "required": "Name is required"
+    },
+    "phone": {
+      "required": "Phone is required.",
+      "pattern": "Invalid Phone number.",
+      "maxLength": "Invalid Phone number.",
+      "minLength": "Invalid Phone number."
+    },
+    "email": {
+      "required": "Email is required.",
+      "pattern": "Invalid Email Address."
+    },
+    "password": {
+      "required": "Password is required.",
+      "minLength": "Password Min length is 8 char."
+    },
+    "password_confirmation": {
+      "required": "Confirm Password is required.",
+      "minLength": "Confirm Password Min length is 8 char.",
+      "validate": "Passwords don't match."
+    },
+    "referral_code": {
+      "pattern": "Invalid code."
+    }
+  }
+}

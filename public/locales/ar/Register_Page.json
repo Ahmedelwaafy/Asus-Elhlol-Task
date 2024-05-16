@@ -1,0 +1,91 @@
+{
+  "tab": {
+    "title": "Go Offer | إنشاء حساب",
+    "description": "Go Offer | أدخل التفاصيل الخاصة بك وقم بإنشاء حساب جديد."
+  },
+  "heading": "إنشاء حساب",
+  "welcome_msg_first": "أدخل التفاصيل الخاصة بك وقم بإنشاء حساب جديد.",
+  "welcome_msg_second": "أضف العلامات التجارية المفضلة لديك.",
+  "form": {
+    "name": {
+      "label": "الاسم",
+      "placeholder": "الاسم"
+    },
+    "referral_code": {
+      "label": "الكود (اختياري)",
+      "placeholder": "الكود",
+      "tooltip": "إذا كان لديك كود من صديق ضعه هنا! "
+    },
+    "phone": {
+      "label": "الهاتف",
+      "placeholder": "الهاتف"
+    },
+    "email": {
+      "label": "البريد الإلكتروني",
+      "placeholder": "البريد الإلكتروني"
+    },
+    "password": {
+      "label": "كلمة المرور",
+      "placeholder": "كلمة المرور"
+    },
+    "password_confirmation": {
+      "label": "تأكيد كلمة المرور",
+      "placeholder": "تأكيد كلمة المرور"
+    },
+
+    "gender": {
+      "label": "النوع",
+      "placeholder": "النوع",
+      "male": "ذكر",
+      "female": "أنثى",
+      "validation_required": "النوع مطلوب."
+    },
+    "country": {
+      "label": "الدولة",
+      "placeholder": "الدولة",
+      "validation_required": "الدولة مطلوبة.",
+      "NotFoundMessage": "لم يتم العثور على بلدان"
+    },
+
+    "terms": {
+      "txt": " أوافق علي",
+      "CTA": "سياسة الخصوصية ",
+      "validation_required": "يجب الموافقة علي سياسة الخصوصية."
+    },
+    "SubmitBtnComponent": {
+      "value": "إنشاء الحساب"
+    },
+    "no_brands_found": "لا يوجد علامات تجارية للدولة التي تم اختيارها!"
+  },
+  "form__bottom": {
+    "have_an_account": "هل لديك حساب؟",
+    "Login": "تسجيل الدخول"
+  },
+  "validations": {
+    "name": {
+      "required": "الإسم مطلوب"
+    },
+    "phone": {
+      "required": "رقم الهاتف مطلوب.",
+      "pattern": "رقم الهاتف غير صحيح.",
+      "maxLength": "رقم الهاتف غير صحيح.",
+      "minLength": "رقم الهاتف غير صحيح."
+    },
+    "email": {
+      "required": "البريد الالكتروني مطلوب.",
+      "pattern": " البريد الإلكتروني غير صحيح."
+    },
+    "password": {
+      "required": "كلمة المرور مطلوبة.",
+      "minLength": "الحد الأدنى لكلمة المرور هو 8 أحرف."
+    },
+    "password_confirmation": {
+      "required": "تأكيد كلمة المرور مطلوب.",
+      "minLength": "الحد الأدنى لتأكيد كلمة المرور هو 8 أحرف.",
+      "validate": "كلمات المرور غير متطابقة."
+    },
+    "referral_code": {
+      "pattern": "رمز التحقق غير صحيح."
+    }
+  }
+}

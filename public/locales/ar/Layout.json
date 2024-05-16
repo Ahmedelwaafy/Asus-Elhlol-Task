@@ -1,0 +1,122 @@
+{
+  "Navbar": {
+    "items": {
+      "home": "الرئيسية",
+      "coupon": " المميزات",
+      "coupons": " الكوبونات",
+      "brands": "العلامات التجارية",
+      "contact_us": "اتصل بنا"
+    },
+    "LoginPopUp": {
+      "Login": "تسجيل الدخول",
+      "Register": "إنشاء حساب"
+    },
+
+    "NavSearch": { "placeholder": "ابحث عن صفقتك المفضلة...    " },
+    "NavDropDownMenu": {
+      "my_profile": "الحساب الشخصي",
+      "Log_out": "تسجيل الخروج"
+    },
+    "Notifications": {
+      "count_formatted": "{{count,number}}",
+      "ErrorMessage": "لقد حدث خطأ ما، يرجى المحاولة مرة أخرى في وقت لاحق!",
+      "NoItemsMessage": "لا توجد إشعارات!"
+    }
+  },
+
+  "Footer": {
+    "first_column": {
+      "title": "الشركة",
+      "help_center": "مركز المساعدة",
+      "menu_items": {
+        "Home": {
+          "title": "الرئيسية",
+          "link": ""
+        },
+        "FAQs": {
+          "title": "الأسئلة الشائعة",
+          "link": "/faqs"
+        },
+        "Contact": {
+          "title": "اتصل بنا",
+          "link": "/contact-us"
+        },
+        "About": {
+          "title": "معلومات عنا",
+          "link": "/about-us"
+        },
+        "Login": {
+          "title": "تسجيل الدخول",
+          "link": "/login"
+        },
+        "Terms_Conditions": {
+          "title": "الأحكام والشروط",
+          "link": "/terms-conditions"
+        }
+      }
+    },
+    "second_column": {
+      "title": "الأقسام المميزة",
+      "menu_items": {
+        "first": {
+          "title": "أفضل المتاجر في مصر",
+          "link": "/brands"
+        },
+        "second": {
+          "title": "أفضل الكوبونات",
+          "link": "/coupons"
+        },
+        "3": {
+          "title": "عروض مميزة",
+          "link": "/deals"
+        },
+        "third": {
+          "title": "المدونة",
+          "link": "/blog"
+        },
+        "fourth": {
+          "title": "الفئات",
+          "link": "/categories"
+        },
+        "fifth": {
+          "title": "اعلن معنا",
+          "link": "/contact-us"
+        }
+      }
+    },
+    "third_column": {
+      "title": "المتاجر المشهورة في مصر",
+      "coupons_formatted": "{{count, number}} كوبونات"
+    },
+    "about_us": "معلومات عنا",
+    "download_app": "تحميل التطبيق",
+    "follow_us": "تابعنا",
+    "news_letter": "نشرة الإخبار",
+    "news_letter_text": "اشترك في النشرة الإخبارية لدينا للحصول على آخر التحديثات والعروض. اشترك لتلقي الأخبار في صندوق الوارد الخاص بك.",
+
+    "Subscribe": "اشترك",
+    "copy_right": "Copyright {{year}} {{website_name}} | Developed by ",
+    "linked_text": "e-RAMO For Digital Solutions",
+    "email": {
+      "placeholder": "أدخل بريدك الإلكتروني",
+      "required_msg": "البريد الالكتروني مطلوب.",
+      "pattern_msg": "عنوان البريد الإلكتروني غير صحيح."
+    }
+  },
+  "LoginPopUp": {
+    "heading": "ترافيك تيتانز",
+    "sub_heading": "يجب عليك تسجيل الدخول أولا!",
+    "Login": "تسجيل الدخول",
+    "Register": "إنشاء حساب"
+  },
+  "LogOutPopUp": {
+    "LogOutPopUpTitle": "هل أنت متأكد أنك تريد تسجيل الخروج ؟",
+    "SubmitBtnText": "تأكيد",
+    "CancelBtnText": "رجوع",
+    "toast_error": "الرجاء تسجيل الدخول أولا!"
+  },
+  "Country": {
+    "placeholder": "الدولة",
+    "NotFoundMessage": "لم يتم العثور على بلدان"
+  }
+}

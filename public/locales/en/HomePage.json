@@ -1,0 +1,19 @@
+{
+  "tab": {
+    "title": "Traffic Titians",
+    "description": "Traffic Titians"
+  },
+  "CouponsGrid": { "CTA_text": "SHOW ALL" },
+  "AboutUs": { "CTA_text": "About Us" },
+  "LatestCategories": { "CTA_text": "SHOW ALL" },
+  "CouponCard": {
+    "active_yes": "Active",
+    "active_no": "Expired",
+    "last_used": "Last used {{time}}",
+    "featured_txt": "Featured",
+    "is_new": "New"
+  },
+  "Testimonials": {
+    "subtitle": "All users who are happy with us, they are happy because they can get big discounts quickly."
+  }
+}
