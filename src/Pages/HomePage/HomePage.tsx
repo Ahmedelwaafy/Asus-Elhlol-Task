@@ -16,7 +16,6 @@ export function Component() {
   const fetchData = async () => {
     setIsLoading(true);
     setError(null);
-
     try {
       const response = await axios.get(
         `https://resturant.asusapps.com/api/v1/catogry/${filter}/products`
