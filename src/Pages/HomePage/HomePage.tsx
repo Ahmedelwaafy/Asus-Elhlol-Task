@@ -54,7 +54,7 @@ export function Component() {
   }, [filter]); //
 
   return (
-    <Container className="bg-white border">
+    <Container className="bg-white border min-h-screen  flex flex-col">
       <HelmetTags
         title="HomePage"
         description="HomePage Description"
@@ -70,8 +70,8 @@ export function Component() {
           <img src="/assets/images/twitter.svg" alt="twitter" />
         </div>
       </div>{" "}
-      <ScrollArea className="site_container ">
-        <div className="flex gap-2 p-4 ">
+      <ScrollArea dir="rtl" className="site_container ">
+        <div className="flex gap-2 p-4 flex-row-reverse ">
           {categories?.map((category) => (
             <button
               onClick={() => setFilter(category?.id)}
@@ -87,7 +87,7 @@ export function Component() {
         </div>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
-      <div className="mt-2 ">
+      <div className="mt-2  grow">
         {isLoading ? (
           <ul className="px-4 flex flex-col gap-2">
             {Array(5)
