@@ -19,7 +19,7 @@ export function Component() {
 
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_BASE_URL}api/v1/catogry/${filter}/products`
+        `https://resturant.asusapps.com/api/v1/catogry/${filter}/products`
       );
 
       setProducts(response.data?.data);

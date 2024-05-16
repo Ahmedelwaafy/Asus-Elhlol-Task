@@ -14,7 +14,7 @@ function CategoryFilter({
   const fetchCategoriesData = async () => {
     try {
       const response = await axios.get(
-        import.meta.env.VITE_BASE_URL_CATEGORIES
+        "https://resturant.asusapps.com/api/v1/catogry"
       );
 
       setCategories(response.data?.data);
