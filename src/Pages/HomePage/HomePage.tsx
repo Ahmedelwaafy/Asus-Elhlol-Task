@@ -112,7 +112,7 @@ export function Component() {
         </button>
       </div>
       <a
-        className="footer underline underline-offset-4 flex-center bg-[#FFEEE6]  h-[37px] sticky bottom-0"
+        className="footer underline underline-offset-4 flex-center bg-[#FFEEE6]  h-[37px] sticky bottom-0 z-[1000]"
         href="https://asus.com"
       >
         صنع من أسس الحلول لتقنية المعلومات
