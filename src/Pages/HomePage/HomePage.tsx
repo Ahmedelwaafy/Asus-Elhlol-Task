@@ -11,16 +11,17 @@ import ProductCardSkelton from "@/components/ProductCardSkelton";
 
 export function Component() {
   const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
-
+  const [filter, setFilter] = useState("661aa1feedc101a708b646ee");
   const fetchData = async () => {
     setIsLoading(true);
     setError(null);
 
     try {
       const response = await axios.get(
-        "https://resturant.asusapps.com/api/v1/catogry/661aa18fedc101a708b646a8/products"
+        `https://resturant.asusapps.com/api/v1/catogry/${filter}/products`
       );
       console.log(response.data?.data);
 
@@ -32,10 +33,25 @@ export function Component() {
       setIsLoading(false);
     }
   };
+  const fetchCategoriesData = async () => {
+    try {
+      const response = await axios.get(
+        `https://resturant.asusapps.com/api/v1/catogry`
+      );
+      console.log(response.data?.data);
+
+      setCategories(response.data?.data);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
 
   useEffect(() => {
-    fetchData();
+    fetchCategoriesData();
   }, []); //
+  useEffect(() => {
+    fetchData();
+  }, [filter]); //
 
   return (
     <Container className="bg-white border">
@@ -56,20 +72,23 @@ export function Component() {
       </div>{" "}
       <ScrollArea className="site_container ">
         <div className="flex gap-2 p-4 ">
-          <button className="bg-transparent w-[124px] flex-center font-medium h-10 rounded-[10px] border shadow-sm">
-            الاطباق الرئيسيه
-          </button>
-          <button className="bg-transparent w-[124px] flex-center font-medium h-10 rounded-[10px] border shadow-sm">
-            السلطات{" "}
-          </button>
-          <button className="bg-primary-foreground text-primary w-[124px] flex-center font-medium h-10 rounded-[10px] border shadow-sm border-primary">
-            المقبلات{" "}
-          </button>
+          {categories?.map((category) => (
+            <button
+              onClick={() => setFilter(category?.id)}
+              className={` min-w-[164px] !w-fit flex-center font-medium h-10 rounded-[10px] border shadow-sm ${
+                filter === category?.id
+                  ? "bg-primary-foreground border-primary text-primary"
+                  : "bg-transparent"
+              }`}
+            >
+              {category?.name}
+            </button>
+          ))}
         </div>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
       <div className="mt-2 ">
-        {isLoading  ? (
+        {isLoading ? (
           <ul className="px-4 flex flex-col gap-2">
             {Array(5)
               .fill("")
@@ -79,7 +98,7 @@ export function Component() {
           </ul>
         ) : error ? (
           <p className="py-7 text-center">Error: {error.message}</p>
-        )  : (
+        ) : (
           <ul className="px-4 flex flex-col gap-2">
             {products?.map((product) => (
               <ProductCard key={product._id} product={product} />
