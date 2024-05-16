@@ -13,7 +13,9 @@ function CategoryFilter({
   const [categories, setCategories] = useState<category[]>([]);
   const fetchCategoriesData = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/catogry`);
+      const response = await axios.get(
+        `${import.meta.env.VITE_BASE_URL}/api/v1/catogry`
+      );
 
       setCategories(response.data?.data);
     } catch (error) {

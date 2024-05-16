@@ -17,7 +17,7 @@ export default function HelmetTags({
   children,
   canonical,
 }: HelmetTagsProps) {
-  const baseURL = import.meta.env.VITE_WEBSITE_BASE_URL + "/";
+  const baseURL = import.meta.env.VITE_BASE_URL + "/";
 
   return (
     <Helmet>
