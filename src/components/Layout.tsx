@@ -5,7 +5,7 @@ function Layout() {
   return (
     <>
       <ErrorBoundary FallbackComponent={ErrorBoundaryFallback}>
-        <main className="w-full bg-background  min-h-screen flex-center py-10">
+        <main className="w-full bg-background  min-h-screen flex-center ">
           <Outlet />
         </main>
       </ErrorBoundary>

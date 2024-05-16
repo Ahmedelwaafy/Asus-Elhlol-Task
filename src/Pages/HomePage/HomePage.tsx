@@ -106,7 +106,7 @@ export function Component() {
           </ul>
         )}
       </div>
-      <div className="cta sticky bottom-[37px] bg-white w-full h-[63px] px-4 py-2.5">
+      <div className="cta sticky bottom-[37px] bg-white w-full h-[63px] px-4 py-2.5 z-[1000]">
         <button className="w-full rounded-[10px] h-[43px] flex-center bg-primary text-white border border-primary trns hover:text-primary hover:bg-transparent hover:scale-105 active:scale-95">
           إكمال الطلب
         </button>
