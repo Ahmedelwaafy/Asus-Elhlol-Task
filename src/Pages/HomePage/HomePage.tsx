@@ -1,17 +1,15 @@
 import HelmetTags from "@/components/HelmetTags";
-
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Container from "@/components/Container";
 import TopBanner from "./Components/TopBanner";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import ProductCard from "@/components/ProductCard";
 import { Product } from "@/types";
 import ProductCardSkelton from "@/components/ProductCardSkelton";
+import CategoryFilter from "./Components/CategoryFilter";
 
 export function Component() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
   const [filter, setFilter] = useState("661aa1feedc101a708b646ee");
@@ -21,37 +19,20 @@ export function Component() {
 
     try {
       const response = await axios.get(
-        `https://resturant.asusapps.com/api/v1/catogry/${filter}/products`
+        `${import.meta.env.VITE_BASE_URL}/api/v1/catogry/${filter}/products`
       );
-      console.log(response.data?.data);
 
       setProducts(response.data?.data);
     } catch (error) {
-      console.error("Error fetching products:", error);
       setError(error as Error);
     } finally {
       setIsLoading(false);
     }
   };
-  const fetchCategoriesData = async () => {
-    try {
-      const response = await axios.get(
-        `https://resturant.asusapps.com/api/v1/catogry`
-      );
-      console.log(response.data?.data);
 
-      setCategories(response.data?.data);
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchCategoriesData();
-  }, []); //
   useEffect(() => {
     fetchData();
-  }, [filter]); //
+  }, [filter]);
 
   return (
     <Container className="bg-white border min-h-screen  flex flex-col">
@@ -70,30 +51,14 @@ export function Component() {
           <img src="/assets/images/twitter.svg" alt="twitter" />
         </div>
       </div>{" "}
-      <ScrollArea dir="rtl" className="site_container ">
-        <div className="flex gap-2 p-4 flex-row-reverse ">
-          {categories?.map((category) => (
-            <button
-              onClick={() => setFilter(category?.id)}
-              className={` min-w-[164px] !w-fit flex-center font-medium h-10 rounded-[10px] border shadow-sm ${
-                filter === category?.id
-                  ? "bg-primary-foreground border-primary text-primary"
-                  : "bg-transparent"
-              }`}
-            >
-              {category?.name}
-            </button>
-          ))}
-        </div>
-        <ScrollBar orientation="horizontal" />
-      </ScrollArea>
+      <CategoryFilter filter={filter} setFilter={setFilter} />
       <div className="mt-2  grow">
         {isLoading ? (
           <ul className="px-4 flex flex-col gap-2">
-            {Array(5)
+            {Array(2)
               .fill("")
-              ?.map((product) => (
-                <ProductCardSkelton key={product._id} />
+              ?.map((_, i) => (
+                <ProductCardSkelton key={i} />
               ))}
           </ul>
         ) : error ? (
@@ -113,7 +78,7 @@ export function Component() {
       </div>
       <a
         className="footer underline underline-offset-4 flex-center bg-[#FFEEE6]  h-[37px] sticky bottom-0 z-[1000]"
-        href="https://asus.com"
+        href="https://asusapps.com/"
       >
         صنع من أسس الحلول لتقنية المعلومات
       </a>

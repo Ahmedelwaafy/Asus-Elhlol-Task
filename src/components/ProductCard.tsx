@@ -3,9 +3,9 @@ import IncreaseDecreaseProductQty from "./IncreaseDecreaseProductQty";
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <li className="w-full min-h-[120px] rounded-[10px] shadow-sm border p-4 relative flex items-center gap-2.5">
+    <li className="w-full min-h-[120px] rounded-[10px] shadow-sm border p-4 relative flex items-center gap-2.5 trns hover:bg-[#ff611d16] select-none">
       {!product?.status && (
-        <div className="overlay absolute w-full h-full min-h-full bg-[#c1c1c17e] inset-0 z-50 flex-center font-semibold select-none    ">
+        <div className="overlay absolute w-full h-full min-h-full bg-[#c1c1c137] inset-0 z-50 flex-center font-semibold select-none    ">
           نفذت الكميه
         </div>
       )}

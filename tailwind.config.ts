@@ -93,7 +93,7 @@ const config = {
       xs: { max: "375px" },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/forms")],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-animated")],
 } satisfies Config;
 
 export default config;

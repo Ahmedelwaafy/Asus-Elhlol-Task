@@ -12,3 +12,8 @@ export interface Product {
   __v: number;
   _id: string;
 }
+export interface category {
+  name: string;
+
+  id: string;
+}

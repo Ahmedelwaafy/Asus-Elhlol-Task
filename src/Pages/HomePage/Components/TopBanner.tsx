@@ -42,9 +42,13 @@ function TopBanner() {
       <div className="cart size-8 bg-white rounded-sm flex-center cursor-pointer hover:scale-105 active:scale-90 trns absolute left-4 mt-1.5">
         <img src="/assets/images/Cart.svg" alt="cart" />
       </div>
-      <div className="absolute left-4 w-[58px] h-[30px] bg-white rounded-[10px] flex-center gap-1 bottom-0 translate-y-4 font-medium border shadow-sm">
+      <div className="absolute left-4 w-[58px] h-[30px] bg-white rounded-[10px] flex-center gap-1 bottom-0 translate-y-4 font-medium border shadow-sm group select-none">
         4.7
-        <img src="/assets/images/star.svg" alt="star" />
+        <img
+          className="group-hover:animate-spin"
+          src="/assets/images/star.svg"
+          alt="star"
+        />
       </div>
       <div className="absolute size-20 rounded-full bg-white right-4 p-[5px] overflow-hidden bottom-0 translate-y-1/2  shadow-md ">
         <img
